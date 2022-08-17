@@ -6,35 +6,41 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputation
 {
-    internal class attendence
+    internal class EmpWage
     {
+
+        public const int emp_rate_per_hour = 20;
+        public const int present = 1;
+        public const int absent = 0;
+
         public static void Main(string[] args)
         {
-            int present = 0;
-            int absent = 0;
+            int empWage = 0;
+            int empHour = 0;
 
-            
             Random random = new Random();
             int option = random.Next(0, 2);
             switch(option)
             {
-                case 0:
-
-                    Console.Write("employee is present");
+                case present:
+                    Console.WriteLine("Employee is present");
+                    empHour = 8;
                     break;
 
-                    case 1:
-
-                    Console.WriteLine("employee is absent");
-                    break ;
-                   
-
-            }
-             
-         
-           
+                case absent:
+                    Console.WriteLine("employee is absent ");
+                    empHour = 0;
+                    break;
+           }
+            empWage = emp_rate_per_hour * empHour;
+            Console.WriteLine("the total employee wage is " + empWage);
 
         }
 
+
+
+
+
+    
     }
 }
