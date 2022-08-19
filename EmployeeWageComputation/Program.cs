@@ -13,7 +13,7 @@ namespace EmployeeWageComputation
         public const int empRateperHour = 20;
         public const int numberOfworkingDays = 20;
         public const int maxHoursinMonth = 100;
-        static void Main(string[] args)
+        static int EmpWage() 
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
 
@@ -43,7 +43,17 @@ namespace EmployeeWageComputation
             }
             totalEmpWage = totalEmpHrs * empRateperHour;
             Console.WriteLine("Monthly employee wage = " + totalEmpWage);
-            
+            return totalEmpWage;   
+
+        }
+
+
+        static void Main(string[] args)
+        {
+            EmpWage();
+
+
+
         }
     }
 }
