@@ -50,8 +50,10 @@ namespace EmployeeWageComputation
 
         static void Main(string[] args)
         {
-            EmpWage();
-
+                Console.WriteLine("Welcome to Employee Wage Computation Program\n");
+            computeEmpwage("Bridgelabz", 10, 27, 31);
+            computeEmpwage("Axtria", 10, 55, 31);
+            computeEmpwage("capgemini", 10, 30, 31);
 
 
         }
